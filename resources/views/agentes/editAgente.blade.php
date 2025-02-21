@@ -9,14 +9,6 @@
 
 <h1>Editar Agente</h1>
 
-@if ($errors->any())
-    <ul style="color: red;">
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
-
 <form action="{{ route('agentes.update', $agente->id) }}" method="POST">
     @csrf
     @method('PUT')
