@@ -58,8 +58,8 @@ class AgenteController extends Controller
      */
     public function edit($id)
     {
-        $agentes = Agente::findOrFail($id);
-        return view('agentes.editAgente', compact('agentes'));
+        $agente = Agente::findOrFail($id);
+        return view('agentes.editAgente', compact('agente'));
     }
 
     /**
@@ -68,6 +68,7 @@ class AgenteController extends Controller
     public function update(Request $request, $id)
     {
         $agente = Agente::findOrFail($id);
+        
         $request->validate([
             'nombre' => 'required|string|max:255',
             'telefono' => 'required|string|max:20',

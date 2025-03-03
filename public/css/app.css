@@ -17,6 +17,10 @@ h1 {
     text-align: center;
 }
 
+main {
+    margin: 40px;
+}
+
 /* Links */
 a {
     color: #3498db;
@@ -34,15 +38,37 @@ button, .btn {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
+    background-color: #c7c7c7;
 }
 
-button {
-    background-color: #e74c3c;
-    color: white;
+.green {
+    margin-right: 6px;
+    background-color: #67b167;
+}
+
+.green:hover {
+    background-color: #4a8f4f;
+}
+
+.editar {
+    background-color: #7ec5ff;
+}
+
+.editar:hover {
+    background-color: #64a4d8;
+}
+
+.eliminar {
+    background-color: #ff5757;
+}
+
+.eliminar:hover {
+    background-color: #ff3030;
 }
 
 button:hover {
-    background-color: #c0392b;
+    background-color: #a7a7a7;
 }
 
 .btn-primary {
@@ -82,11 +108,22 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.container p {
+    margin-bottom: 10px;
+}
+
+div label, div input {
+    margin-bottom: 10px;
+}
+
 /* Form Styles */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: inline-block;
+    padding: 10px;
+}
+
+form select {
+    padding: 5px;
 }
 
 form .mb-3 {
@@ -101,7 +138,7 @@ form label {
 }
 
 form input {
-    padding: 10px;
+    padding: 7px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -114,13 +151,46 @@ form input:focus {
     box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
 }
 
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-edit label {
+    margin-top: 10px;
+}
+
+.form-edit input {
+    margin-top: 10px;
+}
+
+.form-edit textarea {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+    min-width: fit-content;
+    max-height: 100%;
+    min-height: fit-content;
+}
+
+.form-edit select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 20px;
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -131,7 +201,7 @@ table thead {
 }
 
 table th, table td {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -143,6 +213,10 @@ table th {
 
 table tbody tr:hover {
     background-color: #f2f2f2;
+}
+
+table tbody tr td {
+    align-items: center;
 }
 
 /* Card Styles */
@@ -175,19 +249,3 @@ table tbody tr:hover {
     margin-top: 20px;
 }
 
-form button {
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-button[type="submit"] {
-    background-color: #e74c3c;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #c0392b;
-}

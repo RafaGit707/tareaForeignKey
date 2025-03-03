@@ -102,9 +102,11 @@ class PropiedadController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Propiedad $propiedad)
+    public function destroy($id)
     {
+        $propiedad = Propiedad::findOrFail($id);
         $propiedad->delete();
+
         return redirect()->route('propiedades.index')->with('success', 'Propiedad eliminada correctamente');
     }
     

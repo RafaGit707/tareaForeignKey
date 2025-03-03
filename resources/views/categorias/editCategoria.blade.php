@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/app.css">
     <title>Editar Categoria</title>
 </head>
 <body>
@@ -14,17 +15,18 @@
             @csrf
             @method('PUT')
 
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" class="form-control" value="{{ old('nombre', $categoria->nombre) }}" required>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" value="{{ old('nombre', $categoria->nombre) }}" required>
             </div>
             
             <button type="submit" class="btn btn-primary mt-3">Guardar cambios</button>
+            <a href="{{ route('categorias.index') }}">
+                <button class="green" type="button">Volver</button>
+            </a>
         </form>
 
-        <a href="{{ route('categorias.index') }}" class="btn btn-secondary mt-3">Volver a la lista</a>
     </div>
-
 
 </body>
 </html>
